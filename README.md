@@ -14,7 +14,7 @@
 
 #### visualizetion
 
-- [t_SNE.py](/python_script/visualizetion/t_SNE.py)：使用 t_SNE 进行降维并可视化。
+- [t_SNE.py](/python_script/visualization/t_SNE.py)：使用 t_SNE 进行降维并可视化。
 
 #### printer
 
