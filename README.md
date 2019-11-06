@@ -14,8 +14,8 @@
 
 #### visualizetion
 
-- [t_SNE.py](/python_script/t_SNE.py)：使用 t_SNE 进行降维并可视化。
+- [t_SNE.py](/python_script/visualizetion/t_SNE.py)：使用 t_SNE 进行降维并可视化。
 
 #### printer
 
-- [logger.py](/python_script/logger.py)：使用 logging 模块同时将日志打印到终端和文件。
+- [logger.py](/python_script/printer/logger.py)：使用 logging 模块同时将日志打印到终端和文件。
