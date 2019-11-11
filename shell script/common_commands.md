@@ -37,6 +37,10 @@ cat /proc/cpuinfo | grep physical | uniq -c
 
 `cat /proc/4761/status`
 
+- 查看某个用户的所有进程：
+
+`top -U user_name`
+
 ## CPU 设定
 
 - 绑核，将 PID9865 的进程绑到0,2,5-11号CPU上：
@@ -90,12 +94,39 @@ K.set_session(tf.Session(config=config))
 - 虚拟环境相关操作：
 
 ```
+# 可以使用 conda 时：
 conda create -n env_name python=3.6
 source activate env_name
 source deactivate
 conda install -n env_name package_name
 conda remove -n env_name --all
 conda remove --name env_name package_name
+# 无法使用 conda 连网时：
+python3 -m venv env_name
+source env_name/bin/activate
+deactivate
+```
+
+- 命令行 pdb 调试
+
+```
+python -m pdb xxx.py
+(Pdb) b 8      # 设置断点。断点设置该文件的第8行（b即break的首字母）
+(Pdb) b        # 显示所有断点。b命令，没有参数
+(Pdb) cl 2     # 删除断点。删除第2个断点（clear的首字母）
+
+(Pdb) n        # Step Over。单步执行（next的首字母）
+(Pdb) s        # Step Into（step的首字母）
+(Pdb) r        # Setp Return（return的首字母）
+(Pdb) c        # Resume（continue的首字母）
+(Pdb) j 10     # Run to Line。运行到地10行（jump的首字母）
+
+(Pdb) p param  # 查看当前param变量值
+(Pdb) l        # 查看运行到某处代码
+(Pdb) a        # 查看全部栈内变量
+
+(Pdb) h        # 帮助（help的首字母）
+(Pdb) q        # 退出（quit的首字母）
 ```
 
 ## 文件操作
@@ -107,6 +138,10 @@ conda remove --name env_name package_name
 - 修改当前整个文件夹的权限：
 
 `chmod -R 777 ./`
+
+- 打印当前路径：
+
+`pwd`
 
 ## 修改环境变量
 

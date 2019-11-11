@@ -29,3 +29,7 @@ class Logger(object):
 logger = Logger('out_{}.log'.format(experiment_id), level='info').logger
 
 logger.info('xxx')
+
+
+# use logging directly
+# logging.basicConfig(filename='out_{}.log'.format(experiment_id), filemode='a', level=logging.INFO, format="%(asctime)s %(levelname)s:%(message)s", datefmt="%Y-%M-%d %H:%M:%S")
