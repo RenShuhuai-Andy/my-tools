@@ -6,16 +6,16 @@
 
 ## shell script
 
-- `install_package.sh`：使用 conda 命令根据 requirement.txt 安装包。
+- [install_package.sh](/shell_script/install_package.sh)：使用 conda 命令根据 requirement.txt 安装包。
 
-- `common_commands.md`：服务器常用命令。
+- [common_commands.md](/shell_script/common_commands.md)：服务器常用命令。
 
 ## python script
 
 #### visualizetion
 
-- `t_SNE.py`：使用 t_SNE 进行降维并可视化。
+- [t_SNE.py](/python_script/visualization/t_SNE.py)：使用 t_SNE 进行降维并可视化。
 
 #### printer
 
-- `logger.py`：使用 logging 模块同时将日志打印到终端和文件。
+- [logger.py](/python_script/printer/logger.py)：使用 logging 模块同时将日志打印到终端和文件。
