@@ -25,6 +25,10 @@ cat /proc/cpuinfo | grep physical | uniq -c
 
 `lspci | grep -i vga`
 
+### 内存查询
+
+`free`
+
 ### 进程查询
 
 - 查看 PID4761 对应的用户和进程：
@@ -143,6 +147,29 @@ python -m pdb xxx.py
 
 `pwd`
 
+- 文件拷贝
+
+```
+cp file1 file2     # 将文件file1复制成file2，复制后名称被改file2
+cp file1 dir1      # 将文件file1复制到dir1目录下，复制后名称仍未file1
+cp -r dir1 dir2    # 将目录dir1复制到dir2目录下，复制结果目录被改名为dir2
+cp -r dir1/* dir2  # 将目录dir1下所有文件包括文件夹，都复制到dir2目录下
+```
+
+- 使用 `scp` 命令进行上传下载
+
+```
+# 从服务器上下载文件
+scp username@servername:/path/filename /Users/mac/Desktop（本地目录）
+#上传本地文件到服务器
+scp /path/filename username@servername:/path
+# 从服务器下载整个目录 
+scp -r username@servername:/root/（远程目录） /Users/mac/Desktop（本地目录）
+# 上传目录到服务器
+scp -r local_dir username@servername:remote_dir
+# 注意:目标服务器要开启写入权限
+```
+
 ## 修改环境变量
 
 - 直接使用 export 命令：
@@ -159,6 +186,10 @@ export https_proxy=xxx
 - 修改 `~/.bashrc`（对当前用户生效）：
 
 `vi ~/.bashrc`
+
+- 无 sudo 权限下简化 bash [Linux终端bash美化教程](https://www.nenew.net/linux-terminal-bash-mod.html) ：
+
+`export PS1="\[\033[1;32m\]\w\[\033[0m\]\$"`
 
 ## Tensorboard
 
