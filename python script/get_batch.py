@@ -9,7 +9,7 @@ def get_batch_data(inputs, batch_size=None, shuffle=False):
         random.seed(100)
         random.shuffle(indices)
     i = 0  # TODO better solution?
-    while i <= math.ceil(rows / batch_size) - 1:  # TODO need -1?
+    while i <= math.ceil(rows / batch_size): 
         batch_indices = np.asarray(indices[0:batch_size])  # 产生一个batch的index
         indices = indices[batch_size:] + indices[:batch_size]  # 循环移位，以便产生下一个batch
 
