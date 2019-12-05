@@ -19,3 +19,7 @@
 #### printer
 
 - [logger.py](/python_script/printer/logger.py)：使用 logging 模块同时将日志打印到终端和文件。
+
+[hook.py](/python_script/hook.py)：使用 pytorch hook 获取中间层变量的值和梯度。
+
+[get_batch.py](/python_script/get_batch.py)：获取一个 batch_siez 的 data。

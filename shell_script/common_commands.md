@@ -29,6 +29,16 @@ cat /proc/cpuinfo | grep physical | uniq -c
 
 `free`
 
+### 文件（夹）大小查询
+
+- 查看当前文件夹大小
+
+`du -sh`
+
+- 查看某个文件（夹）大小查询
+
+`du -h file/folder`
+
 ### 进程查询
 
 - 查看 PID4761 对应的用户和进程：
@@ -156,6 +166,10 @@ cp -r dir1 dir2    # 将目录dir1复制到dir2目录下，复制结果目录被
 cp -r dir1/* dir2  # 将目录dir1下所有文件包括文件夹，都复制到dir2目录下
 ```
 
+- 查看文件的访问时间和修改时间：
+
+`stat file`
+
 - 使用 `scp` 命令进行上传下载
 
 ```
@@ -194,6 +208,10 @@ export https_proxy=xxx
 ## Tensorboard
 
 `tensorboard.exe --logdir=\path\to\logs`
+
+- 开其它端口：
+
+`tensorboard.exe --logdir=\path\to\logs --port=6007`
 
 ## Docker
 
