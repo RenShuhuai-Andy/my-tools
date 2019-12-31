@@ -21,6 +21,10 @@ cat /proc/cpuinfo | grep physical | uniq -c
 
 `nvidia-smi –l`
 
+- 寻找GPU利用率瓶颈 ([参考](https://zhuanlan.zhihu.com/p/53345706))：
+
+`watch -n 0.1 nvidia-smi`
+
 - 查看GPU型号：
 
 `lspci | grep -i vga`
@@ -87,7 +91,17 @@ K.set_session(tf.Session(config=config))
 
 - 指定pip源：
 
-`pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple`
+```
+# 临时指定
+pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install scrapy -i https://pypi.doubanio.com/simple
+# 永久指定
+mkdir ~/.pip
+vi ~/.pip/pip.conf
+[global]
+trusted-host=mirrors.aliyun.com
+index-url=http://mirrors.aliyun.com/pypi/simple/
+```
 
 - 查看库的安装位置：
 
@@ -109,10 +123,10 @@ K.set_session(tf.Session(config=config))
 
 ```
 # 可以使用 conda 时：
-conda create -n env_name python=3.6
+conda create -n env_name -y python=3.6
 source activate env_name
 source deactivate
-conda install -n env_name package_name
+conda install -n env_name -y package_name
 conda remove -n env_name --all
 conda remove --name env_name package_name
 # 无法使用 conda 连网时：
