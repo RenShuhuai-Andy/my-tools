@@ -17,7 +17,7 @@ cat /proc/cpuinfo | grep physical | uniq -c
 
 ### GPU 查询
 
-- 查看GPU使用情况： 
+- 查看GPU使用情况/驱动版本/CUDA版本： 
 
 `nvidia-smi –l`
 
@@ -28,6 +28,28 @@ cat /proc/cpuinfo | grep physical | uniq -c
 - 查看GPU型号：
 
 `lspci | grep -i vga`
+
+- 查看cuda版本：
+
+```
+cat /usr/local/cuda/version.txt
+nvcc --version
+```
+
+### DL框架与兼容性查询
+
+- 查看torch版本和torch cuda版本：
+
+`python -c "import torch; print('torch version: ', torch.__version__); print('cuda version: ', torch.version.cuda)"`
+
+- [显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？ - marsggbo的文章 - 知乎](https://zhuanlan.zhihu.com/p/91334380)
+
+- [CUDA与nvidia driver版本兼容性检查表](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA)
+- [CUDA与pytorch版本兼容性检查表](https://pytorch.org/get-started/previous-versions/)
+
+- [CUDA与TensorFlow版本兼容性检查表](https://www.tensorflow.org/install/source#tested_build_configurations)
+
+- [TensorFlow与keras版本兼容性检查表](https://docs.floydhub.com/guides/environments/)
 
 ### 内存查询
 
@@ -157,6 +179,10 @@ python -m pdb xxx.py
 (Pdb) q        # 退出（quit的首字母）
 ```
 
+- 开启http服务器
+
+`python -m http.server`
+
 ## 文件操作
 
 - 删除当前目录下的所有文件：
@@ -229,13 +255,13 @@ export https_proxy=xxx
 
 ## Docker
 
-[只要一小时，零基础入门Docker - 笑虎的文章 - 知乎](https://zhuanlan.zhihu.com/p/23599229)
+- [只要一小时，零基础入门Docker - 笑虎的文章 - 知乎](https://zhuanlan.zhihu.com/p/23599229)
 
 ## tmux
 
-[tmux：打造精致与实用并存的终端](https://segmentfault.com/a/1190000008188987)
+- [tmux：打造精致与实用并存的终端](https://segmentfault.com/a/1190000008188987)
 
-[Tmux 快捷键 & 速查表 & 简明教程](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
+- [Tmux 快捷键 & 速查表 & 简明教程](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
 
 - 创建tmux会话：
 
