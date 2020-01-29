@@ -1,0 +1,87 @@
+{
+    "log": {
+      "loglevel": "warning",
+      "access": "D:\\v2ray-windows-64\\logs\\access.log", //Linux下改为"/etc/v2ray/access.log"
+      "error": "D:\\v2ray-windows-64\\logs\\error.log" //Linux下改为"/etc/v2ray/error.log"
+    },
+    "inbounds": [
+      {
+        "port": 1080,
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": ["http", "tls"]
+        },
+        "settings": {
+          "auth": "noauth"
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vmess",
+        "settings": {
+          "vnext": [
+            {
+              "address": "TODO",
+              "port": "TODO",
+              "users": [
+                {
+                  "id": "TODO",  
+                  "alterId": 64
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "protocol": "freedom",
+        "settings": {},
+        "tag": "direct"//如果要使用路由，这个 tag 是一定要有的，在这里 direct 就是 freedom 的一个标号，在路由中说 direct V2Ray 就知道是这里的 freedom 了
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {},
+        "tag": "adblock"//同样的，这个 tag 也是要有的，在路由中说 adblock 就知道是这里的 blackhole（黑洞） 了
+      }
+    ],
+    "routing": {
+      "domainStrategy": "IPOnDemand",
+      "rules": [
+        {
+          "domain": [
+            "tanx.com",
+            "googeadsserving.cn",
+            "baidu.com"
+          ],
+          "type": "field",
+          "outboundTag": "adblock"       
+        },
+        {
+          "domain": [
+            "amazon.com",
+            "microsoft.com",
+            "jd.com",
+            "youku.com",
+            "baidu.com"
+          ],
+          "type": "field",
+          "outboundTag": "direct"
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": ["geosite:cn"]
+        },
+        {
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:cn",
+            "geoip:private"
+          ]
+        }
+      ]
+    }
+  }

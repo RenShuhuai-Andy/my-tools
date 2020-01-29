@@ -39,3 +39,7 @@
 - [get_batch.py](/python_script/get_batch.py)：获取一个 batch_siez 的 data。
 
 - [time.py](/python_script/time.py)：计算程序运行时间。
+
+## v2ray script
+
+- [README.md](/v2ray_script/README.md)：v2ray的相关命令、配置、阅读材料。
