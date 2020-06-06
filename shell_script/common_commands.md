@@ -57,13 +57,24 @@ nvcc --version
 
 ### 文件（夹）大小查询
 
-- 查看当前文件夹大小
+- 查看当前文件夹大小：
 
 `du -sh`
 
-- 查看某个文件（夹）大小查询
+- 查看当前目录下所有文件夹的大小（参数--max-depth 表示深入目录的层数）：
+
+` du -h --max-depth 1`
+
+- 查看某个文件（夹）大小查询：
 
 `du -h file/folder`
+
+### 文件字节数/字数/行数查询
+
+```
+wc -lcw file1 [file2]
+# -c: 统计字节数; -l: 统计行数; -w: 统计字数
+```
 
 ### 进程查询
 
@@ -137,7 +148,7 @@ index-url=http://mirrors.aliyun.com/pypi/simple/
 
 `python -c "print('test')" | tee -a out.txt`
 
-- 运行 python 程序并忽略 WARNING 输出;
+- 运行 python 程序并忽略 WARNING 输出：
 
 `python -W ignore file.py`
 
@@ -151,11 +162,18 @@ source deactivate
 conda install -n env_name -y package_name
 conda remove -n env_name --all
 conda remove --name env_name package_name
+conda info --env
 # 无法使用 conda 连网时：
 python3 -m venv env_name
 source env_name/bin/activate
 deactivate
 ```
+
+- 输出本地包环境到终端和文件
+
+`pip freeze | tee requirements.txt`
+
+可以用 `pip freeze | grep tensor` 来显示仅含 `tensor` 的包名
 
 - 命令行 pdb 调试
 

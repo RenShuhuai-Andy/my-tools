@@ -32,6 +32,13 @@
 
 - [examples.py](/python_script/cuda_memory_tracker/examples.py)：对于 `gpu_mem_track.py` 的使用示例。
 
+#### configargparse
+
+统一了命令行参数、配置文件、环境变量等设置，并创建为单例模式，使得它们在代码的任何地方都可以通过 `Config.get_instatnce()` 被导入和使用。
+
+- [example.py](/python_script/configargparse/example.py)：使用 configargparse 的案例。
+- [model.yaml](/python_script/configargparse/model.yaml)：yaml 风格的配置文件案例。
+
 #### other
 
 - [hook.py](/python_script/hook.py)：使用 pytorch hook 获取中间层变量的值和梯度。

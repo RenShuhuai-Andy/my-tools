@@ -1,0 +1,5 @@
+model: bert 
+dataset: imdb 
+batch: 40 
+epoch: 2 
+lr: 5e-5 
