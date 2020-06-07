@@ -15,8 +15,9 @@
 #### visualizetion
 
 - [t_SNE.py](/python_script/visualization/t_SNE.py)：使用 t_SNE 进行降维并可视化。
-
 - [tensorboardx.py](/python_script/visualization/tensorboardx.py)：使用 tensorboardX 对训练进行可视化。
+- [matplotlib.py](/python_script/visualization/matplotlib.py)：使用 matplotlib 画折线图的一个实例，包含多条折线时的配色方案。
+  - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
 
 #### printer
 
