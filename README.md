@@ -6,9 +6,9 @@
 
 ## shell script
 
-- [install_package.sh](/shell_script/install_package.sh)：使用 conda 命令根据 requirement.txt 安装包。
-
 - [common_commands.md](/shell_script/common_commands.md)：服务器常用命令。
+- [install_package.sh](/shell_script/install_package.sh)：使用 conda 命令根据 requirement.txt 安装包。
+- [pycharm_ssh.md](/shell_script/pycharm_ssh.md)：有跳板机的情况下通过 pycharm 连接远程服务器。
 
 ## python script
 

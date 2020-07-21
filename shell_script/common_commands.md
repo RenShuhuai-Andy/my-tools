@@ -169,13 +169,13 @@ source env_name/bin/activate
 deactivate
 ```
 
-- 输出本地包环境到终端和文件
+- 输出本地包环境到终端和文件：
 
 `pip freeze | tee requirements.txt`
 
 可以用 `pip freeze | grep tensor` 来显示仅含 `tensor` 的包名
 
-- 命令行 pdb 调试
+- 命令行 pdb 调试：
 
 ```
 python -m pdb xxx.py
@@ -228,7 +228,7 @@ cp -r dir1/* dir2  # 将目录dir1下所有文件包括文件夹，都复制到d
 
 `stat file`
 
-- 使用 `scp` 命令进行上传下载
+- 使用 `scp` 命令进行上传下载：
 
 ```
 # 从服务器上下载文件
@@ -240,6 +240,30 @@ scp -r username@servername:/root/（远程目录） /Users/mac/Desktop（本地�
 # 上传目录到服务器
 scp -r local_dir username@servername:remote_dir
 # 注意:目标服务器要开启写入权限
+# 把当前机器上的work文件夹拷贝到192.168.0.11机器的/home/work目录下
+scp -r -P port /home/work/ user_name@192.168.0.11:/home/work/  
+```
+
+- 使用 `wget` 命令下载 Google drive 文件：
+
+```
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILEID" -O FILENAME && rm -rf /tmp/cookies.txt
+```
+
+替换其中的 FILEID 和 FILENAME 即可，FILENAME 自己命名，FILEID 是 Google drive 公开分享的链接中 ID 后面的，例如：`https://drive.google.com/open?id=***ThisIsFileID***`
+
+- 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件夹）：
+
+```
+head -1000 train.txt > train_1000.txt
+tail -1000 train.txt > train_1000.txt
+```
+
+- 查看一个文件的前 n 行：
+
+```
+head -n train.txt
+tail -n train.txt
 ```
 
 ## 修改环境变量
@@ -280,7 +304,11 @@ export https_proxy=xxx
 - [tmux：打造精致与实用并存的终端](https://segmentfault.com/a/1190000008188987)
 
 - [Tmux 快捷键 & 速查表 & 简明教程](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
-
+- tmux美化：[https://github.com/gpakosz/.tmux](https://github.com/gpakosz/.tmux)
 - 创建tmux会话：
 
 `tmux new-session -s <会话名称>`
+
+## bash
+
+- [Bash 脚本教程 - 网道(WangDoc.com)](https://wangdoc.com/bash/)
