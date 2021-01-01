@@ -2,7 +2,7 @@
 import torch
 import inspect
 from torchvision import models
-from gpu_mem_track import  MemTracker
+from gpu_mem_track import MemTracker
 
 device = torch.device('cuda:0')
 

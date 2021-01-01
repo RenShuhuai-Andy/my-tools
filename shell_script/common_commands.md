@@ -42,14 +42,15 @@ nvcc --version
 
 `python -c "import torch; print('torch version: ', torch.__version__); print('cuda version: ', torch.version.cuda)"`
 
-- [显卡，显卡驱动,nvcc, cuda driver,cudatoolkit,cudnn到底是什么？ - marsggbo的文章 - 知乎](https://zhuanlan.zhihu.com/p/91334380)
-
+- [显卡,显卡驱动,nvcc,cuda driver,cudatoolkit,cudnn到底是什么？ - marsggbo的文章 - 知乎](https://zhuanlan.zhihu.com/p/91334380)
 - [CUDA与nvidia driver版本兼容性检查表](https://github.com/NVIDIA/nvidia-docker/wiki/CUDA)
 - [CUDA与pytorch版本兼容性检查表](https://pytorch.org/get-started/previous-versions/)
-
 - [CUDA与TensorFlow版本兼容性检查表](https://www.tensorflow.org/install/source#tested_build_configurations)
-
 - [TensorFlow与keras版本兼容性检查表](https://docs.floydhub.com/guides/environments/)
+- [pytorch分布式训练环境检查](https://github.com/pytorch/pytorch/tree/master/test/distributed)
+- [tensorflow1.x与2.x函数对照表 (不全)](https://docs.google.com/spreadsheets/d/1FLFJLzg7WNP6JHODX5q8BDgptKafq_slHpnHVbJIteQ/edit#gid=0)
+
+- [Linux服务器中非 root 用户安装 (多版本) CUDA 和 cuDNN](https://www.jianshu.com/p/c95c5b6a4707)
 
 ### 内存查询
 
@@ -134,6 +135,17 @@ vi ~/.pip/pip.conf
 [global]
 trusted-host=mirrors.aliyun.com
 index-url=http://mirrors.aliyun.com/pypi/simple/
+```
+
+- 指定conda源：
+
+```
+conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'
+conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/'
+conda config --setshow_channel_urls yes
+
+# 验证源
+conda config --show channels
 ```
 
 - 查看库的安装位置：
@@ -250,7 +262,7 @@ scp -r -P port /home/work/ user_name@192.168.0.11:/home/work/
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=FILEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=FILEID" -O FILENAME && rm -rf /tmp/cookies.txt
 ```
 
-替换其中的 FILEID 和 FILENAME 即可，FILENAME 自己命名，FILEID 是 Google drive 公开分享的链接中 ID 后面的，例如：`https://drive.google.com/open?id=***ThisIsFileID***`
+替换其中的 FILEID 和 FILENAME 即可，FILENAME 自己命名，FILEID 是 Google drive 公开分享的链接中 ID 后面的，例如：`https://drive.google.com/open?id=***ThisIsFileID***` 或 `https://drive.google.com/file/d/***ThisIsFileID***/view?usp=sharing`
 
 - 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件夹）：
 
@@ -264,6 +276,12 @@ tail -1000 train.txt > train_1000.txt
 ```
 head -n train.txt
 tail -n train.txt
+```
+
+- Windows下批量转换CRLF到LF
+
+```
+for /R %G in (*) do dos2unix "%G"
 ```
 
 ## 修改环境变量

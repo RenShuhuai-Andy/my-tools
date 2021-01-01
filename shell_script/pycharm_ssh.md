@@ -19,12 +19,14 @@ Host *
 ssh -p <server_port> <username>@<server_ip>
 ```
 
-### 二、本地(windows端)配置
+### 二、本地配置
 
-打开cmd，输入一下命令：
+打开cmd，输入以下命令：
 
 ```bash
 ssh -N -f -L 6000:<server_ip>:<server_port> -p <jump_port> <jump_username>@<jump_ip> -o TCPKeepAlive=yes
+# 多个跳板机时：
+ssh -N -f -L 6000:<server_ip>:<server_port> -p <jump_port> <jump_username1>@<jump_ip1>,<jump_username2>@<jump_ip2> -o TCPKeepAlive=yes
 ```
 
 通过以上方式我们就建立起了 localhost:6000 到 <server_ip>:<server_port> 的映射，其中 `-L` 是通过“本地转发”方式建立 ssh 隧道；`-N` 使跳板机连接远程服务器后，并不打开shell；`-f` 使命令行窗口关闭后，仍在后台运行，需要和 `-N` 配合使用。此时关闭 cmd 窗口也不会停止 ssh 隧道了。
