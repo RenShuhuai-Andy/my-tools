@@ -142,7 +142,7 @@ index-url=http://mirrors.aliyun.com/pypi/simple/
 ```
 conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'
 conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/'
-conda config --setshow_channel_urls yes
+conda config --set show_channel_urls yes
 
 # 验证源
 conda config --show channels
@@ -264,7 +264,13 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 
 替换其中的 FILEID 和 FILENAME 即可，FILENAME 自己命名，FILEID 是 Google drive 公开分享的链接中 ID 后面的，例如：`https://drive.google.com/open?id=***ThisIsFileID***` 或 `https://drive.google.com/file/d/***ThisIsFileID***/view?usp=sharing`
 
-- 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件夹）：
+- [使用 `curl` 命令下载 Dropbox 文件](https://www.jianshu.com/p/50bccca07d50)：
+
+```
+curl -L -o newName.zip https://www.dropbox.com/sh/[folderLink]?dl=1
+```
+
+- 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件）：
 
 ```
 head -1000 train.txt > train_1000.txt
@@ -282,6 +288,12 @@ tail -n train.txt
 
 ```
 for /R %G in (*) do dos2unix "%G"
+```
+
+- 批量将文件名中的oldstring替换为newstring
+
+```bash
+for file in `ls`;do mv $file `echo $file|sed 's/oldstring/newstring/g'`;done;
 ```
 
 ## 修改环境变量
