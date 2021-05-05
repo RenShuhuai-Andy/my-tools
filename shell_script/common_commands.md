@@ -325,6 +325,19 @@ export https_proxy=xxx
 
 `tensorboard.exe --logdir=\path\to\logs --port=6007`
 
+- 远程访问服务器Tensorboard
+
+
+```bash
+ssh -L 16006:127.0.0.1:6006 username@serverIP  # 使用该命令登陆服务器
+tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
+```
+
+## Jupyter
+
+- [远程访问服务器Jupyter Notebook](https://www.jianshu.com/p/8fc3cd032d3c)，用方法1即可
+
+
 ## Docker
 
 - [只要一小时，零基础入门Docker - 笑虎的文章 - 知乎](https://zhuanlan.zhihu.com/p/23599229)
@@ -342,3 +355,11 @@ export https_proxy=xxx
 ## bash
 
 - [Bash 脚本教程 - 网道(WangDoc.com)](https://wangdoc.com/bash/)
+
+## nvitop
+
+- [nvitop: An interactive NVIDIA-GPU process viewer](https://github.com/XuehaiPan/nvitop)
+
+## icdiff
+
+- [icdiff: Improved colored diff](https://github.com/jeffkaufman/icdiff)
