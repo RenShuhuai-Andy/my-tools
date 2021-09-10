@@ -14,12 +14,17 @@
 
 #### visualization
 
-- [t_SNE.py](/python_script/visualization/t_SNE.py)：使用 t_SNE 进行降维并可视化。
+- [plt_vis.ipynb](/python_script/visualization/plt_vis.ipynb)：使用 matplotlib 进行可视化的示例，包括：
+    - [官方 colormap](https://matplotlib.org/tutorials/colors/colormaps.html)、 [配色方案](https://colorhunt.co/palettes/popular)、 [plt style](https://matplotlib.org/3.1.1/gallery/style_sheets/style_sheets_reference.html)
+    - 折线图
+    - 双栏折线图
+    - 直方图
+    - (多模态的) attention matrix 热力图
+    - 使用 t_SNE 进行降维的可视图
+- matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
 - [tensorboardx.py](/python_script/visualization/tensorboardx.py)：使用 tensorboardX 对训练进行可视化。
-- [matplotlib.py](/python_script/visualization/matplotlib.py)：使用 matplotlib 画折线图的一个实例，包含多条折线时的配色方案。
-  - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
-- [attn_heatmap.py](/python_script/visualization/attn_heatmap.py): （多模态的）attention matrix 可视化。
-- [huggingface transformer visualization on attention/model/neuron](https://github.com/jessevig/bertviz)
+- [bertviz](https://github.com/jessevig/bertviz)：对 huggingface transformer attention/model/neuron 的可视化
+- [Transformer-Explainability](https://github.com/hila-chefer/Transformer-Explainability)：可视化 transformer 注意力在输入上的分配
 
 #### printer
 

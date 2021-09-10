@@ -356,9 +356,10 @@ tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 
 - [Bash 脚本教程 - 网道(WangDoc.com)](https://wangdoc.com/bash/)
 
-## nvitop
+## GPU监控程序
 
-- [nvitop: An interactive NVIDIA-GPU process viewer](https://github.com/XuehaiPan/nvitop)
+- [nvitop: An interactive NVIDIA-GPU process viewer](https://github.com/XuehaiPan/nvitop)：nvidia-smi 的替代品
+- [gpu_lurker](https://github.com/RenShuhuai-Andy/gpu_lurker)：服务器 GPU 监控程序，当 GPU 属性满足预设条件时通过微信发送提示消息
 
 ## icdiff
 
