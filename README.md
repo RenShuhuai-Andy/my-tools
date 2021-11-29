@@ -14,6 +14,13 @@
 
 #### visualization
 
+##### 训练可视化
+
+- [wandb for pytorch](https://docs.wandb.ai/guides/integrations/pytorch)：使用 wandb 对训练进行可视化。
+- [tensorboardx.py](/python_script/visualization/tensorboardx.py)：使用 tensorboardX 对训练进行可视化。
+
+##### 结果可视化
+
 - [plt_vis.ipynb](/python_script/visualization/plt_vis.ipynb)：使用 matplotlib 进行可视化的示例，包括：
     - [官方 colormap](https://matplotlib.org/tutorials/colors/colormaps.html)、 [配色方案](https://colorhunt.co/palettes/popular)、 [plt style](https://matplotlib.org/3.1.1/gallery/style_sheets/style_sheets_reference.html)
     - 折线图
@@ -22,9 +29,10 @@
     - (多模态的) attention matrix 热力图
     - 使用 t_SNE 进行降维的可视图
 - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
-- [tensorboardx.py](/python_script/visualization/tensorboardx.py)：使用 tensorboardX 对训练进行可视化。
+
 - [bertviz](https://github.com/jessevig/bertviz)：对 huggingface transformer attention/model/neuron 的可视化
 - [Transformer-Explainability](https://github.com/hila-chefer/Transformer-Explainability)：可视化 transformer 注意力在输入上的分配
+- [Gradio](https://github.com/gradio-app/gradio)：为机器学习模型、API或函数创建GUI
 
 #### printer
 
@@ -36,9 +44,13 @@
 
 - [model_size_estimate.py](/python_script/cuda_memory_tracker/model_size_estimate.py)：估计 pytorch 模型参数和中间变量所占显存的大小。
 
-- [gpu_mem_track.py](/python_script/cuda_memory_tracker/gpu_mem_track.py)：精确跟踪 pytorch 模型的显存使用情况（需要安装 NVIDIA 的 python 环境库 pynvml：`pip install nvidia-ml-py3`）。
+- [gpu_mem_track.py](/python_script/cuda_memory_tracker/gpu_mem_track.py)：精确跟踪 pytorch 模型的显存使用情况（需要安装 NVIDIA 的 python 环境库 pynvml：`pip install nvidia-ml-py3`，或 `conda install -c conda-forge pynvml`）。
 
 - [examples.py](/python_script/cuda_memory_tracker/examples.py)：对于 `gpu_mem_track.py` 的使用示例。
+
+另一种监控显存的方法：[Pytorch Profiler](https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html)
+
+[PyTorch显存机制分析 - Connolly的文章 - 知乎](https://zhuanlan.zhihu.com/p/424512257)
 
 #### configargparse
 
@@ -46,6 +58,8 @@
 
 - [example.py](/python_script/configargparse/example.py)：使用 configargparse 的案例。
 - [model.yaml](/python_script/configargparse/model.yaml)：yaml 风格的配置文件案例。
+
+另一种指定实验配置的方法：[Sacred](https://github.com/IDSIA/sacred)
 
 #### other
 
