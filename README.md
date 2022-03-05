@@ -33,6 +33,7 @@
 - [bertviz](https://github.com/jessevig/bertviz)：对 huggingface transformer attention/model/neuron 的可视化
 - [Transformer-Explainability](https://github.com/hila-chefer/Transformer-Explainability)：可视化 transformer 注意力在输入上的分配
 - [Gradio](https://github.com/gradio-app/gradio)：为机器学习模型、API或函数创建GUI
+- [Terminalizer](https://terminalizer.com/)：为命令行演示创建gif
 
 #### printer
 

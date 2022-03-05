@@ -253,7 +253,7 @@ scp -r username@servername:/root/（远程目录） /Users/mac/Desktop（本地�
 scp -r local_dir username@servername:remote_dir
 # 注意:目标服务器要开启写入权限
 # 把当前机器上的work文件夹拷贝到192.168.0.11机器的/home/work目录下
-scp -r -P port /home/work/ user_name@192.168.0.11:/home/work/  
+scp -r -P port /home/work/ user_name@192.168.0.11:/home/work/
 ```
 
 - 使用 `wget` 命令下载 Google drive 文件：
@@ -329,7 +329,7 @@ export https_proxy=xxx
 
 
 ```bash
-ssh -L 16006:127.0.0.1:6006 username@serverIP  # 使用该命令登陆服务器
+ssh -L 16006:127.0.0.1:6006 -p port username@serverIP  # 使用该命令登陆服务器
 tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 ```
 
@@ -337,6 +337,15 @@ tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 
 - [远程访问服务器Jupyter Notebook](https://www.jianshu.com/p/8fc3cd032d3c)，用方法1即可
 
+- [jupyter notebook中选择conda环境及其可能出现的问题解决](https://segmentfault.com/a/1190000023346483)
+
+    ```bash
+    # 在base环境中
+    conda install nb_conda_kernels
+    # 在新环境中
+    conda install -n 环境名称 ipykernel  # 直接指定环境安装ipykernel
+    python -m ipykernel install --user --name 环境名称  # 写入jupyter notebook 的kernel
+    ```
 
 ## Docker
 
