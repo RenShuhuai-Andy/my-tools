@@ -359,7 +359,8 @@ tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 - tmux美化：[https://github.com/gpakosz/.tmux](https://github.com/gpakosz/.tmux)
 - 创建tmux会话：
 
-`tmux new-session -s <会话名称>`
+    `tmux new-session -s <会话名称>`
+- [linux非root用户安装tmux](https://blog.csdn.net/yupei881027/article/details/117091367)
 
 ## bash
 

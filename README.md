@@ -30,7 +30,10 @@
     - (多模态的) attention matrix 热力图
     - 使用 t_SNE 进行降维的可视图
 - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
-
+- [The Python Graph Gallery](https://www.python-graph-gallery.com/)：使用 python 绘制各种类型的图表
+- UMAP:
+    - [Understanding UMAP](https://pair-code.github.io/understanding-umap/)
+    - [[译] 理解 UMAP(2): UMAP和一些误解 - 邻泽居士的文章 - 知乎](https://zhuanlan.zhihu.com/p/352461768)
 - [bertviz](https://github.com/jessevig/bertviz)：对 huggingface transformer attention/model/neuron 的可视化
 - [Transformer-Explainability](https://github.com/hila-chefer/Transformer-Explainability)：可视化 transformer 注意力在输入上的分配
 - [Gradio](https://github.com/gradio-app/gradio)：为机器学习模型、API或函数创建GUI
