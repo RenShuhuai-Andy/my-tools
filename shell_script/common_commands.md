@@ -256,6 +256,19 @@ scp -r local_dir username@servername:remote_dir
 scp -r -P port /home/work/ user_name@192.168.0.11:/home/work/
 ```
 
+- 大文件传输时的切分、合并和校验：
+
+```
+# 将大文件（big.tar.gz）切分为多个小文件，每个 500M，切分后的文件默认以 x* 命名，如 xaa，xab 等
+split -b 500m big.tar.gz
+# 传输后，将多个小文件重新合并回大文件
+cat xa* > big.tar.gz
+# 校验文件完整性
+md5sum big.tar.gz > before.md5  # (拆分前)
+md5sum big.tar.gz > after.md5  # (合并后)
+cmp before.md5 after.md5
+```
+
 - 使用 `wget` 命令下载 Google drive 文件：
 
 ```
