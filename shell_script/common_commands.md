@@ -181,6 +181,8 @@ source env_name/bin/activate
 deactivate
 ```
 
+- [Conda 环境迁移 - MrTian的文章 - 知乎](https://zhuanlan.zhihu.com/p/87344422)
+
 - 输出本地包环境到终端和文件：
 
 `pip freeze | tee requirements.txt`
@@ -267,6 +269,18 @@ cat xa* > big.tar.gz
 md5sum big.tar.gz > before.md5  # (拆分前)
 md5sum big.tar.gz > after.md5  # (合并后)
 cmp before.md5 after.md5
+```
+
+- 大文件/多个文件的并行压缩与解压（利用 [pigz](https://blog.csdn.net/lj402159806/article/details/76618174)  和 [GNU parallel](https://stackoverflow.com/questions/5547787/running-shell-script-in-parallel)，默认并发8个线程）：
+
+```bash
+# 并行压缩大文件
+tar --use-compress-program="pigz -k -p32" -cvpf package.tgz ./package  # 并发32个线程
+# 并行解压大文件
+tar --use-compress-program="pigz -dk -p32" -xvpf package.tgz -C ./package  # 并发32个线程
+
+# 并行解压多个 tar 文件（用于处理 ImageNet-21K 等）
+find . -name "*.tar" | parallel 'echo {};  ext={/}; target_folder=${ext%.*}; mkdir -p $target_folder; tar -xf {} -C $target_folder'
 ```
 
 - 使用 `wget` 命令下载 Google drive 文件：
