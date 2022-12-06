@@ -9,6 +9,7 @@
 - [common_commands.md](/shell_script/common_commands.md)：服务器常用命令。
 - [install_package.sh](/shell_script/install_package.sh)：使用 conda 命令根据 requirement.txt 安装包。
 - [pycharm_ssh.md](/shell_script/pycharm_ssh.md)：有跳板机的情况下通过 pycharm 连接远程服务器。
+- [pycharm_ddp_debug.md](/shell_script/pycharm_ddp_debug.md)：使用 pycharm 对 pytorch ddp 进行 debug。
 
 ## python script
 
@@ -29,6 +30,7 @@
     - 直方图
     - (多模态的) attention matrix 热力图
     - 使用 t_SNE 进行降维的可视图
+    - 雷达图 ([acknowledge](https://github.com/muzairkhattak/multimodal-prompt-learning/issues/5))
 - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
 - [The Python Graph Gallery](https://www.python-graph-gallery.com/)：使用 python 绘制各种类型的图表
 - UMAP:

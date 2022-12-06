@@ -1,4 +1,4 @@
-# Pycharm连接远程服务器
+# PyCharm 连接远程服务器
 
 ## 有跳板机时的ssh连接
 
@@ -35,7 +35,7 @@ ssh -N -f -L 6000:<server_ip>:<server_port> -p <jump_port> <jump_username1>@<jum
 
 在配置时，把 SSH interpreter 的 host 设置为 127.0.0.1（设为localhost可以吗？TODO），port 为 6000 就可以了。
 
-reference：
+### Reference：
 
 - [windows下pycharm通过跳板机使用远程解释器remote interpreter](https://www.jianshu.com/p/afe423602ce3)
 - [pycharm + ssh 跳板机 + 服务器](http://jjkislele.cn/2019/08/22/2019-08-22-usage-pycharm-ssh/)
