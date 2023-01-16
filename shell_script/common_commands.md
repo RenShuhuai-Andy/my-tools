@@ -382,6 +382,15 @@ tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 
 - [远程访问服务器Jupyter Notebook](https://www.jianshu.com/p/8fc3cd032d3c)，用方法1即可
 
+    ```bash
+    # 1. 在远程服务器上，启动jupyter notebooks服务：
+    jupyter notebook --no-browser --port=8889
+    # 2. 在本地终端中启动SSH：
+    ssh -N -f -L localhost:8888:localhost:8889 username@serverIP
+    # 其中：-N 告诉SSH没有命令要被远程执行；-f 告诉SSH在后台执行；-L 是指定port forwarding的配置，远端端口是8889，本地的端口号的8888。
+    # 3. 最后打开浏览器，访问：http://localhost:8888/
+    ```
+
 - [jupyter notebook中选择conda环境及其可能出现的问题解决](https://segmentfault.com/a/1190000023346483)
 
     ```bash
