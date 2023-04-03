@@ -315,6 +315,16 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 curl -L -o newName.zip https://www.dropbox.com/sh/[folderLink]?dl=1
 ```
 
+- [使用 `curl` 命令下载 OneDrive 文件](https://www.sooele.com/4328.html)：
+
+```
+# 使用Chrome打开OneDrive下载内容页面，按下F12，打开开发人员工具，然后转到network选项，
+# 之后点击想要下载的文件进行下载，同时观察开发人员工具窗口，找到带有download.aspx/?…. 的那个链接
+# 之后在那个链接上右键，选择 copy -> copy as cURL，得到类似下面的命令语句：
+curl 'https://gitaccuacnz2-my.sharepoint.com/personal/mail_finderacg_com/_layouts/15/download.aspx?UniqueId=cb44677f%2Dc4af%2D44ad%2D88d4%2Dceb07d9625da' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -H 'Accept-Language: zh-HK,zh-TW;q=0.5' --compressed -H 'Connection: keep-alive' -H 'Referer: https://gitaccuacnz2-my.sharepoint.com/personal/mail_finderacg_com/_layouts/15/onedrive.aspx?.......' -H 'Cookie: CCSInfo=NS8yOS8yMDIwIDEwOjE1OjE0IEFNC/.....; FeatureOverrides_enableFeatures=; FeatureOverrides_disableFeatures=' -H 'Upgrade-Insecure-Requests: 1' -H 'Sec-Fetch-Dest: iframe' -H 'Sec-Fetch-Mode: navigate' -H 'Sec-Fetch-Site: same-origin'
+# 之后粘贴到Linux的命令行里，最后在后面补加一句 --output 想要保存的文件名
+```
+
 - 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件）：
 
 ```
