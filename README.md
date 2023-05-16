@@ -90,6 +90,10 @@
 - [model_stats.py](/python_script/model_stats.py)：打印模型状态，包括参数名、参数量、显存开销、Flops、激活张量的大小等。
 </details>
 
+## latex
+
+- [def_and_cmd.tex](/latex/def_and_cmd.tex)：latex中常用的包、定义、命令等。
+
 ## v2ray script
 
 - [README.md](/v2ray_script/README.md)：v2ray的相关命令、配置、阅读材料。
