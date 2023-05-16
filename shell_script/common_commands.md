@@ -325,18 +325,20 @@ curl 'https://gitaccuacnz2-my.sharepoint.com/personal/mail_finderacg_com/_layout
 # 之后粘贴到Linux的命令行里，最后在后面补加一句 --output 想要保存的文件名
 ```
 
-- 将某个文件的前/后 n 行复制到另外一个文件（可构建用于 debug 的小文件）：
+- 将某个文件的前/后 1000 行复制到另外一个文件（可构建用于 debug 的小文件）：
 
 ```
 head -1000 train.txt > train_1000.txt
 tail -1000 train.txt > train_1000.txt
 ```
 
-- 查看一个文件的前 n 行：
+- 查看一个文件的前/后 10 行/字符：
 
 ```
-head -n train.txt
-tail -n train.txt
+head -n 10 train.txt
+tail -n 10 train.txt
+head -c 10 anno.json
+tail -c 10 anno.json
 ```
 
 - Windows下批量转换CRLF到LF
