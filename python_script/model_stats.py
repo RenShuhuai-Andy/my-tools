@@ -134,7 +134,6 @@ def log_model_info(model, cfg, use_train_input=True):
     """
     print("Model:\n{}".format(model))
     print("Params: {:,}".format(params_count(model)))
-    print("Mem: {:,} GB".format(gpu_mem_usage()))
     print(
         "Flops: {:,} G".format(
             get_model_stats(model, cfg, "flop", use_train_input)
@@ -145,5 +144,6 @@ def log_model_info(model, cfg, use_train_input=True):
             get_model_stats(model, cfg, "activation", use_train_input)
         )
     )
+    print("Mem: {:,} GB".format(gpu_mem_usage()))
     print("nvidia-smi")
     os.system("nvidia-smi")

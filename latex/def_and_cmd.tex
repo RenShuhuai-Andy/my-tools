@@ -38,6 +38,43 @@
 % comment
 \newcommand{\rsh}[1]{\textcolor{orange}{[#1 - rsh]}}
 
+% Two parallel Figures
+\begin{figure*}
+\centering
+\begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{icons/snowflake.png}
+    \caption{}
+    \label{fig:1}
+\end{minipage}
+\hspace{5pt} % Add 1cm of space
+\begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{icons/fire.jpg}
+    \caption{}
+    \label{fig:2}
+\end{minipage}
+\end{figure*}
+
+% Two parallel sub-figures (a) (b) in one figure
+\begin{figure*}[tbp]
+  \centering
+  \subfloat[sfig-cap-1]{
+    \label{sfig:1}
+    \includegraphics[width=.48\textwidth]{icons/snowflake.png}} %\hspace{1em}
+  \subfloat[CIFAR100]{
+    \label{sfig-cap-2}
+    \includegraphics[width=.45\textwidth]{icons/fire.jpg}}
+  \caption{}
+  \label{fig:}
+\end{figure*}
+
+% wrapfigure
+\begin{wrapfigure}[19]{tr}{0.5\textwidth}
+\centering
+\includegraphics[width=0.5\textwidth]{icons/snowflake.png}
+\caption{}
+\label{fig:overview}
+\end{wrapfigure}
+
 % package
 \usepackage{hyperref}
 \usepackage{graphics}
