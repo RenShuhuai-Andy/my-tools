@@ -200,6 +200,12 @@ deactivate
 ```
 
 - [Conda 环境迁移 - MrTian的文章 - 知乎](https://zhuanlan.zhihu.com/p/87344422)
+```
+# 导出 environment.yml 文件：
+conda env export > environment.yml
+# 重现环境：
+conda env create -f environment.yml
+```
 
 - 输出本地包环境到终端和文件：
 
