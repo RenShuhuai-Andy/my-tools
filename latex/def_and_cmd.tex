@@ -29,7 +29,7 @@
 \newcommand{\demph}[1]{\textcolor{demphcolor}{#1}}
 \newcommand{\impro}[1]{{\hspace{0.05cm}{\color[HTML]{32CB00}\textbf{(+#1)}}}}
 \newcommand{\degra}[1]{{\hspace{0.05cm}{\textcolor{red}{\textbf{(-#1)}}}}}
-\rowcolor{gray!25}  % set background color of a row in a table to gray
+\rowcolor{gray!25}  % set background color of a row in a table to gray. require \usepackage{colortbl}
 
 % icons
 \newcommand{\snowflake}{\includegraphics[width=10px]{icons/snowflake.png}}
@@ -57,10 +57,10 @@
 % Two parallel sub-figures (a) (b) in one figure
 \begin{figure*}[tbp]
   \centering
-  \subfloat[sfig-cap-1]{
+  \subfigure[sfig-cap-1]{
     \label{sfig:1}
     \includegraphics[width=.48\textwidth]{icons/snowflake.png}} %\hspace{1em}
-  \subfloat[CIFAR100]{
+  \subfigure[CIFAR100]{
     \label{sfig-cap-2}
     \includegraphics[width=.45\textwidth]{icons/fire.jpg}}
   \caption{}

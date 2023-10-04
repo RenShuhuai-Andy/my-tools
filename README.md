@@ -31,6 +31,10 @@
     - (多模态的) attention matrix 热力图
     - 使用 t_SNE 进行降维的可视图
     - 雷达图 ([acknowledge](https://github.com/muzairkhattak/multimodal-prompt-learning/issues/5))
+    - 伪蜡烛图
+    - 拟合散点图并画出趋势线
+    - 多条折线图
+    - 太阳图
 - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
 - [The Python Graph Gallery](https://www.python-graph-gallery.com/)：使用 python 绘制各种类型的图表
 - UMAP:
