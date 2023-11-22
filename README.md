@@ -92,6 +92,7 @@
 - [get_batch.py](/python_script/get_batch.py)：获取一个 batch_siez 的 data。
 - [time.py](/python_script/time.py)：计算程序运行时间。
 - [model_stats.py](/python_script/model_stats.py)：打印模型状态，包括参数名、参数量、显存开销、Flops、激活张量的大小等。
+- [multi_process.py](/python_script/multi_process.py)：多进程的使用示例。
 </details>
 
 ## latex
