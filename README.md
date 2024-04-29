@@ -35,6 +35,7 @@
     - 拟合散点图并画出趋势线
     - 多条折线图
     - 太阳图
+    - 单位球面
 - matplotlib 画图参考 [matplotlib：先搞明白plt. /ax./ fig再画 - 姚太多啊的文章 - 知乎](https://zhuanlan.zhihu.com/p/93423829)
 - [The Python Graph Gallery](https://www.python-graph-gallery.com/)：使用 python 绘制各种类型的图表
 - UMAP:
@@ -92,6 +93,7 @@
 - [get_batch.py](/python_script/get_batch.py)：获取一个 batch_siez 的 data。
 - [time.py](/python_script/time.py)：计算程序运行时间。
 - [model_stats.py](/python_script/model_stats.py)：打印模型状态，包括参数名、参数量、显存开销、Flops、激活张量的大小等。
+- [multi_process.py](/python_script/multi_process.py)：多进程的使用示例。
 </details>
 
 ## latex

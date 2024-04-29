@@ -17,6 +17,12 @@
 \def \bt{\bar{{\bf t}}}
 \def \mR{\mathbb{R}}
 
+\usepackage{pifont}
+\definecolor{my_green}{RGB}{51,102,0}
+\definecolor{my_red}{RGB}{204, 0, 0}
+\newcommand{\cmark}{\textcolor{my_green}{\ding{51}}} % ✔
+\newcommand{\xmark}{\textcolor{my_red}{\ding{55}}} % ✘
+
 % style
 \newcommand{\acronym}[1]{\underline{\textbf{#1}}}
 \newcommand{\m}[1]{\mathbf{#1}}
@@ -30,6 +36,13 @@
 \newcommand{\impro}[1]{{\hspace{0.05cm}{\color[HTML]{32CB00}\textbf{(+#1)}}}}
 \newcommand{\degra}[1]{{\hspace{0.05cm}{\textcolor{red}{\textbf{(-#1)}}}}}
 \rowcolor{gray!25}  % set background color of a row in a table to gray. require \usepackage{colortbl}
+
+% colorbox
+\definecolor{oorange}{RGB}{252,218,227}
+\definecolor{yyellow}{RGB}{255,237,203}
+\definecolor{ppurple}{RGB}{208,205,226}
+\definecolor{ggreen}{RGB}{195,222,176}
+% example usage: \colorbox{ggreen}{todo}
 
 % icons
 \newcommand{\snowflake}{\includegraphics[width=10px]{icons/snowflake.png}}
