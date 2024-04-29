@@ -97,11 +97,19 @@ wc -lcw file1 [file2]
 
 ### 进程查询
 
-- 查看 PID4761 对应的用户和进程：
+- 查看 PID 4761 对应的用户和进程：
 
-`ps -aux|grep 4761`
+`ps -aux | grep 4761`
 
-- 查看 PID4761 对应的存活线程：
+- 查看名称包含 “python” 的所有进程：
+
+`ps aux | grep python`
+
+- 杀死名称包含 “fairseq” 的所有进程（可用于杀死僵尸进程）：
+
+`pkill -f fairseq`
+
+- 查看 PID 4761 对应的存活线程：
 
 `pstree -p 4761`
 
@@ -428,7 +436,15 @@ tensorboard --logdir="/path/to/log-directory  # 在服务器上运行
 - [tmux：打造精致与实用并存的终端](https://segmentfault.com/a/1190000008188987)
 
 - [Tmux 快捷键 & 速查表 & 简明教程](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
+
 - tmux美化：[https://github.com/gpakosz/.tmux](https://github.com/gpakosz/.tmux)
+    ```bash
+    cd
+    git clone https://github.com/gpakosz/.tmux.git
+    ln -s -f .tmux/.tmux.conf
+    cp .tmux/.tmux.conf.local .
+    ```
+
 - 创建tmux会话：
 
     `tmux new-session -s <会话名称>`
