@@ -95,6 +95,7 @@
 - [model_stats.py](/python_script/model_stats.py)：打印模型状态，包括参数名、参数量、显存开销、Flops、激活张量的大小等。
 - [multi_process.py](/python_script/multi_process.py)：多进程的使用示例。
 - [gpus.py](/python_script/gpus.py): 空占GPU资源的脚本
+- [tax_calculator.py](/python_script/tax_calculator.py): 按自然年计算个税
 </details>
 
 ## latex
